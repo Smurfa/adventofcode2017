@@ -30,5 +30,24 @@ namespace Advent_of_Code_2017
 
             return sum;
         }
+
+        public int Task2()
+        {
+            var numbers = _numbers.ToCharArray().CharToIntegerEnumerable().ToList();
+
+            var sum = 0;
+
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                var offset = i + numbers.Count / 2;
+                if (offset >= numbers.Count)
+                    offset -= numbers.Count;
+
+                if (numbers[i] == numbers[offset])
+                    sum += numbers[i];
+            }
+
+            return sum;
+        }
     }
 }
