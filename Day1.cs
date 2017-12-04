@@ -8,18 +8,25 @@ namespace Advent_of_Code_2017
 {
     public class Day1
     {
-        public int Task1(string value)
+        private readonly string _numbers;
+
+        public Day1(string numbers)
         {
-            var numbers = value.ToCharArray().CharToIntegerEnumerable();
+            _numbers = numbers;
+        }
+
+        public int Task1()
+        {
+            var numbers = _numbers.ToCharArray().CharToIntegerEnumerable().ToList();
             var sum = 0;
 
-            for (var i = 0; i < numbers.Count() - 1; i++)
+            for (var i = 0; i < numbers.Count - 1; i++)
             {
-                if (numbers.ElementAt(i) == numbers.ElementAt(i + 1))
-                    sum += numbers.ElementAt(i);
+                if (numbers[i] == numbers[i + 1])
+                    sum += numbers[i];
             }
-            if (numbers.ElementAt(0) == numbers.ElementAt(numbers.Count() - 1))
-                sum += numbers.ElementAt(0);
+            if (numbers[0] == numbers[numbers.Count - 1])
+                sum += numbers[0];
 
             return sum;
         }
