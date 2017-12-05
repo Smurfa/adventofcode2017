@@ -18,6 +18,8 @@ namespace Advent_of_Code_2017
             Console.WriteLine($"Day 2, task 1: {day2.Task1()}");
             Console.WriteLine($"Day 2, task 2: {day2.Task2()}");
 
+            var day4 = new Day4(@"..\..\Day4Input.txt");
+            Console.WriteLine($"Day 4, task 1: {day4.Task1()}");
 
             Console.ReadLine();
         }

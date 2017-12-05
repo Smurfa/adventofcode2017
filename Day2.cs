@@ -13,7 +13,7 @@ namespace Advent_of_Code_2017
 
         public Day2(string filepath)
         {
-            _data = ReadInput(filepath);
+            _data = ReadFile.AsEnumerableEnumerableInt(filepath, new []{ '\t' });
         }
 
         public int Task1()
@@ -29,10 +29,5 @@ namespace Advent_of_Code_2017
                         .Sum(divisor => dividend / divisor)));
         }
 
-        private IEnumerable<IEnumerable<int>> ReadInput(string filepath)
-        {
-            var lines = File.ReadAllText(filepath).Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-            return lines.Select(line => line.Split('\t').Select(int.Parse));
-        }
     }
 }
