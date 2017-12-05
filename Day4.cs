@@ -21,5 +21,21 @@ namespace Advent_of_Code_2017
             return _data.Count(list =>
                 list.Count() == list.Distinct().Count());
         }
+
+        public int Task2()
+        {
+            return RearrangeCharcters(_data).Count(list => 
+                list.Count() == list.Distinct().Count());
+        }
+
+        private IEnumerable<IEnumerable<string>> RearrangeCharcters(IEnumerable<IEnumerable<string>> input)
+        {
+            return _data
+                .Select(list => list
+                    .Select(s => s
+                        .ToCharArray()
+                        .OrderBy(x => x)
+                        .Aggregate(string.Empty, (current, next) => current + next)));
+        }
     }
 }

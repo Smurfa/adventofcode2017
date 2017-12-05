@@ -20,6 +20,7 @@ namespace Advent_of_Code_2017
 
             var day4 = new Day4(@"..\..\Day4Input.txt");
             Console.WriteLine($"Day 4, task 1: {day4.Task1()}");
+            Console.WriteLine($"Day 4, task 2: {day4.Task2()}");
 
             Console.ReadLine();
         }
