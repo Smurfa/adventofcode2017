@@ -23,9 +23,10 @@ namespace Advent_of_Code_2017
 
         public int Task2()
         {
-            return _data.Sum(list =>
-                list.Sum(dividend =>
-                    list.Where(divisor => dividend % divisor == 0 && dividend != divisor)
+            return _data
+                .Sum(list => list
+                    .Sum(dividend => list
+                        .Where(divisor => dividend % divisor == 0 && dividend != divisor)
                         .Sum(divisor => dividend / divisor)));
         }
 
