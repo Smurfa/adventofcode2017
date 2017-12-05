@@ -24,6 +24,9 @@ namespace Advent_of_Code_2017
 
             var day5 = new Day5(@"..\..\Day5Input.txt");
             Console.WriteLine($"Day 5, task 1: {day5.Task1()}");
+            day5.ResetData(@"..\..\Day5Input.txt");
+            Console.WriteLine($"Day 5, task 2: {day5.Task2()}");
+
             Console.ReadLine();
         }
     }
