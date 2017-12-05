@@ -12,5 +12,10 @@ namespace Advent_of_Code_2017
         {
             return input.Select(x => int.Parse(x.ToString()));
         }
+
+        public static IEnumerable<int> StringToIntegerEnumerable(this IEnumerable<string> input)
+        {
+            return input.Select(x => int.Parse(x.ToString()));
+        }
     }
 }

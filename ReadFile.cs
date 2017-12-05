@@ -26,5 +26,10 @@ namespace Advent_of_Code_2017
             return ReadLines(filepath)
                 .Select(line => line.Split(delimiters));
         }
+
+        public static IEnumerable<int> AsEnumerableInt(string filepath)
+        {
+            return ReadLines(filepath).StringToIntegerEnumerable();
+        }
     }
 }
