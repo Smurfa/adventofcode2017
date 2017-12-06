@@ -24,11 +24,11 @@ namespace Advent_of_Code_2017
 
         public int Task2()
         {
-            return RearrangeCharcters(_data).Count(list => 
+            return RearrangeCharcters().Count(list => 
                 list.Count() == list.Distinct().Count());
         }
 
-        private IEnumerable<IEnumerable<string>> RearrangeCharcters(IEnumerable<IEnumerable<string>> input)
+        private IEnumerable<IEnumerable<string>> RearrangeCharcters()
         {
             return _data
                 .Select(list => list
