@@ -18,6 +18,9 @@ namespace Advent_of_Code_2017
             Console.WriteLine($"Day 2, task 1: {day2.Task1()}");
             Console.WriteLine($"Day 2, task 2: {day2.Task2()}");
 
+            var day3 = new Day3(312051);
+            Console.WriteLine($"Day 3, task 1: {day3.Task1()}");
+
             var day4 = new Day4(@"..\..\Day4Input.txt");
             Console.WriteLine($"Day 4, task 1: {day4.Task1()}");
             Console.WriteLine($"Day 4, task 2: {day4.Task2()}");
@@ -29,6 +32,9 @@ namespace Advent_of_Code_2017
 
             var day6 = new Day6(new []{ 2, 8, 8, 5, 4, 2, 3, 1, 5, 5, 1, 2, 15, 13, 5, 14 });
             Console.WriteLine($"Day 6, task 1: {day6.Task1()}");
+            day6.Reset(new[] { 2, 8, 8, 5, 4, 2, 3, 1, 5, 5, 1, 2, 15, 13, 5, 14 });
+            Console.WriteLine($"Day 6, task 2: {day6.Task2()}");
+
             Console.ReadLine();
         }
     }
